@@ -17,7 +17,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed',Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -42,7 +42,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald, sans-serif;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -121,14 +121,18 @@ ol {
   padding: 4px 0;
   max-width: 200px;
   gap: 4px;
+  max-inline-size: 200px;
 }
 
 .content__video-card-title {
-  font-family: Oswald, sans-serif;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -193,6 +197,7 @@ ol {
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -202,17 +207,17 @@ ol {
 
 .search-form__textfield{
   color: rgba(255, 255, 255, 0.70);
-  font-family: inherit;
-  font-size: inherit;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: inherit;
+  font-weight: 700;
   line-height: normal;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   inline-size: 225px;
-  background: none;
-  outline: none;
-  border: none;
+  background: transparent;
+  border-right: 0;
+  border-left: 0;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -247,16 +252,20 @@ ol {
 .button {
   color: #FFF;
   text-align: center;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   padding: 6px 0;
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
   background: none;
   cursor: pointer;
   inline-size: 100%;
+}
+
+.button:active {
+  background-color: #545050;
 }
 
 .button:hover {
